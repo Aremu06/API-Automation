@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "firstName": "Tunmisey",
+      "lastName": "Ten",
+      "courses": [
+        "C",
+        "C++"
+      ],
+      "id": "2",
+      "subjectId": 5
+    },
+    {
+      "firstName": "Ben",
+      "id": "1",
+      "lastName": "Tout",
+      "subjectId": 1,
+      "courses": [
+        "GO",
+        "Appium"
+      ]
+    },
+    {
+      "id": "3",
+      "firstName": "AnyName",
+      "lastName": "AnyLastName",
+      "courses": [
+        "C#",
+        "PHP"
+      ],
+      "subjectId": 2
+    },
+    {
+      "id": "2e32",
+      "firstName": "Germ",
+      "lastName": "Ball",
+      "subjectId": 2
+    },
+    {
+      "id": "316c",
+      "firstName": "Gerry",
+      "lastName": "Belly",
+      "subjectId": 3
+    },
+    {
+      "id": "b128",
+      "firstName": "Germ",
+      "lastName": "Ball",
+      "subjectId": 2
+    },
+    {
+      "id": "a5f7",
+      "firstName": "Gerry",
+      "lastName": "Belly",
+      "subjectId": 3
+    },
+    {
+      "id": "fddc",
+      "firstName": "Graham",
+      "lastName": "Bell",
+      "subjectId": 1
+    },
+    {
+      "id": "f858",
+      "firstName": "Germ",
+      "lastName": "Ball",
+      "subjectId": 2
+    },
+    {
+      "id": "7315",
+      "firstName": "Romeo",
+      "lastName": "Jane",
+      "courses": [
+        "C",
+        "C++"
+      ],
+      "subjectId": 5
+    },
+    {
+      "id": "f083",
+      "firstName": "Romeo",
+      "lastName": "Jane",
+      "courses": [
+        "C",
+        "C++"
+      ],
+      "subjectId": 5
+    }
+  ],
+  "subjects": [
+    {
+      "id": "1",
+      "name": "Devops"
+    },
+    {
+      "id": "2",
+      "name": "Automation"
+    }
+  ]
+}
