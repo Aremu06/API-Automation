@@ -41,7 +41,7 @@ public class Authentication {
     @Test(priority = 4)
     void testBearerToken() {
 
-        given().header("Authorization", "Bearer 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")
+        given().header("Authorization", "BearerToken")
                 .when().get("https://github.com/Aremu06/API-Automation")
                 .then().statusCode(200).log().all();
 
@@ -58,7 +58,7 @@ public class Authentication {
     @Test
     void testOAu2Authentication() { // this is for OAuth 2.0
 
-        given().auth().oauth2("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")
+        given().auth().oauth2("BearerToken")
                 .when().get("https://github.com/Aremu06/API-Automation")
                 .then().statusCode(200).log().all();
 
