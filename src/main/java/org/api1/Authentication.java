@@ -41,7 +41,7 @@ public class Authentication {
     @Test(priority = 4)
     void testBearerToken() {
 
-        given().header("Authorization", "Bearer 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")
+        given().header("Authorization", "Bearer Token")
                 .when().get("https://github.com/Aremu06/API-Automation")
                 .then().statusCode(200).log().all();
 
