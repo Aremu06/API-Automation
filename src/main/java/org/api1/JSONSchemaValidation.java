@@ -1,14 +1,14 @@
 package org.api1;
+
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.testng.annotations.Test;
 
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import static org.hamcrest.Matchers.*;
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
+
 public class JSONSchemaValidation {
 
     @Test
-    void JsonSchemaValidation(){
+    void JsonSchemaValidation() {
 
         given()
 

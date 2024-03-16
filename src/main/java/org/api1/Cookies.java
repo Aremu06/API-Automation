@@ -1,13 +1,16 @@
 package org.api1;
+
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
+
+
 public class Cookies {
     @Test(priority = 1)
-    void testCookies(){
+    void testCookies() {
 
         given()
 
@@ -18,7 +21,7 @@ public class Cookies {
     }
 
     @Test(priority = 2)
-    void testCookiesInfo(){
+    void testCookiesInfo() {
 
         Response response = given()
 
@@ -27,24 +30,22 @@ public class Cookies {
         // get single cookies info
 
         //String cookies_value = response.cookie("AEC");
-       // System.out.println("Value of cookies is ====>"+ cookies_value);
+        // System.out.println("Value of cookies is ====>"+ cookies_value);
 
         // get all cookies info
 
-      Map<String, String> cookies_value = response.getCookies();
-     //   System.out.println(cookies_value.keySet());
+        Map<String, String> cookies_value = response.getCookies();
+        //   System.out.println(cookies_value.keySet());
 
-        for (String k:cookies_value.keySet()){
+        for (String k : cookies_value.keySet()) {
             String cookie_value = response.getCookie(k);
-            System.out.println(k+  "    "+ cookie_value);
+            System.out.println(k + "    " + cookie_value);
 
 
         }
 
 
-
     }
-
 
 
 }

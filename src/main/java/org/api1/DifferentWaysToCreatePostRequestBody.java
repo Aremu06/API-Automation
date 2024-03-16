@@ -1,14 +1,16 @@
 package org.api1;
 
+import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.annotations.Test;
-import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashMap;
-import static org.hamcrest.Matchers.*;
+
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
 
 
 //1) Post request using Hashmap

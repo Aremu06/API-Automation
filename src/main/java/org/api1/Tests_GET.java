@@ -1,8 +1,7 @@
 package org.api1;
-import io.restassured.response.Response;
+
 import org.testng.annotations.Test;
-import java.util.HashMap;
-import static io.restassured.RestAssured.get;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
@@ -10,7 +9,7 @@ import static org.hamcrest.Matchers.hasItems;
 public class Tests_GET {
 
     @Test
-    public void test_1(){
+    public void test_1() {
 
         given().get("https://reqres.in/api/users?page=2")
                 .then()

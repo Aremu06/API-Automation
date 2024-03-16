@@ -2,9 +2,12 @@ package org.api1;
 
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
+
 import java.util.HashMap;
+
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
+
 /*
     given()
          content type,set cookies, add auth, add param, set headers info etc....
@@ -70,7 +73,7 @@ public class HTTPRequests {
     }
 
     @Test(priority = 4)
-    void deleteUser(){
+    void deleteUser() {
 
         given()
 

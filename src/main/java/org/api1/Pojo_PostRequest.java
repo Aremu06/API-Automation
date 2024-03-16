@@ -16,22 +16,26 @@ public class Pojo_PostRequest {
 
     }
 
-    public String getLastName(String lastName){
+    public String getLastName(String lastName) {
         return lastName;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public String getId(String id){
+
+    public String getId(String id) {
         return id;
     }
 
     public void setId(String id) {
         Id = id;
     }
+
     public String[] getCourses() {
         return courses;
     }
+
     public void setCourses(String[] courses) {
         this.courses = courses;
     }

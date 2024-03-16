@@ -51,5 +51,5 @@ public class ParsingJsonResponseData extends DataDriven {
 
             Assert.assertEquals(status, true);
         }
-        }
+    }
 }

@@ -1,18 +1,14 @@
 package org.api1;
 
 import io.restassured.http.ContentType;
-import org.json.JSONObject;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.RestAssured.given;
 
-public class DataDrivenTests extends DataDriven{
+public class DataDrivenTests extends DataDriven {
 //    @DataProvider(name = "DataForPost")
 //    public Object [] [] dataForPost(){
 //
@@ -23,9 +19,9 @@ public class DataDrivenTests extends DataDriven{
 //                {"Gerry", "Belly", 3},
 //        };
 
-  //  }
+    //  }
     @Test(dataProvider = "DataForPost")
-    public void test_post(String firstName, String lastName, int subjectId){
+    public void test_post(String firstName, String lastName, int subjectId) {
 
         Map<String, Object> request = new HashMap<>();
 
@@ -33,14 +29,14 @@ public class DataDrivenTests extends DataDriven{
         request.put("lastName", lastName);
         request.put("subjectId", subjectId);
 
-       // baseURI = "http://localhost:8000/users";
+        // baseURI = "http://localhost:8000/users";
 
         given().header("Content-Type", "application/json")
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
                 .body(request)
 
-                .when().post(baseURI+"users")
+                .when().post(baseURI + "users")
 
                 .then().statusCode(201).log().all();
 
@@ -56,12 +52,12 @@ public class DataDrivenTests extends DataDriven{
 //    }
 
     @Test(dataProvider = "DeleteData")
-    public void test_delete(int userId){
+    public void test_delete(int userId) {
 
-      //  baseURI = "http://localhost:8000/";
+        //  baseURI = "http://localhost:8000/";
 
         when()
-                .delete(baseURI+"users/4")
+                .delete(baseURI + "users/4")
 
                 .then()
                 .statusCode(200);

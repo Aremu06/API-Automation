@@ -1,20 +1,18 @@
 package org.api1;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.http.ContentType;
-import org.testng.annotations.Test;
 import org.json.JSONObject;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import java.util.HashMap;
-import static org.hamcrest.Matchers.*;
+import org.testng.annotations.Test;
+
 import static io.restassured.RestAssured.*;
-import  io.restassured.response.Response;
+
+;
 
 
 public class dbJsonSampleRequest {
 
     @Test
-    public void test_get(){
+    public void test_get() {
 
         baseURI = "http://localhost:8000/";
 
@@ -28,17 +26,17 @@ public class dbJsonSampleRequest {
     }
 
     @Test
-    public void test_post(){
+    public void test_post() {
 
         JSONObject request = new JSONObject();
 
         request.put("firstName", "Tommy");
         request.put("lastName", "Jay");
         request.put("subjectId", 1);
-        request.put("courses","C");
-        request.put("courses[0]","C++");
+        request.put("courses", "C");
+        request.put("courses[0]", "C++");
 
-      //  baseURI = "https://2b61-77-191-173-223.ngrok-free.app/";
+        //  baseURI = "https://2b61-77-191-173-223.ngrok-free.app/";
 
         given().header("Content-Type", "application/json")
                 .contentType(ContentType.JSON)
@@ -55,7 +53,7 @@ public class dbJsonSampleRequest {
     }
 
     @Test
-    public void test_patch(){
+    public void test_patch() {
 
         JSONObject request = new JSONObject();
 
@@ -81,15 +79,15 @@ public class dbJsonSampleRequest {
     }
 
     @Test
-    public void test_put(){
+    public void test_put() {
 
         JSONObject request = new JSONObject();
 
         request.put("firstName", "Mary");
         request.put("lastName", "Jane");
         request.put("subjectId", 1);
-        request.put("courses","C");
-        request.put("courses[0]","C++");
+        request.put("courses", "C");
+        request.put("courses[0]", "C++");
 
         baseURI = "http://localhost:8000/";
 
@@ -106,8 +104,9 @@ public class dbJsonSampleRequest {
                 .log().all();
 
     }
+
     @Test
-    public void test_delete(){
+    public void test_delete() {
 
         baseURI = "https://2b61-77-191-173-223.ngrok-free.app/";
 
